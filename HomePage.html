@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<h2>Home Page</h2>
+
+<div class="button-grid">
+    <button onclick="handleChoice(1)">Member</button>
+    <button onclick="handleChoice(2)">Claims</button>
+    <button onclick="handleChoice(3)">Reports</button>
+    <button onclick="handleChoice(4)">Monthly Processes</button>
+    <button onclick="handleChoice(5)">Company Parameters</button>
+    <button onclick="handleChoice(6)">System Settings</button>
+    <button onclick="handleChoice(7)">Other</button>
+</div>
+
+<script>
+    function handleChoice(choice) {
+        switch (choice) {
+            case 1:
+                handleMemberActions();
+                break;
+            case 2:
+                // Implement Claims actions
+                console.log("Claims actions selected.");
+                break;
+            case 3:
+                // Implement Reports actions
+                console.log("Reports actions selected.");
+                break;
+            case 4:
+                // Implement Monthly processes actions
+                console.log("Monthly processes actions selected.");
+                break;
+            case 5:
+                // Implement Company parameters actions
+                console.log("Company parameters actions selected.");
+                break;
+            case 6:
+                // Implement System settings actions
+                console.log("System settings actions selected.");
+                break;
+            case 7:
+                // Implement Other actions
+                console.log("Other actions selected.");
+                break;
+            default:
+                console.log("Invalid choice. Please try again.");
+                break;
+        }
+    }
+
+    function handleMemberActions() {
+        var memberChoice = prompt("Member Actions:\n1. Member Capture\n2. Member Enquiry & Search\n\nEnter your choice:");
+        if (memberChoice === '1') {
+            captureMemberDetails();
+        } else if (memberChoice === '2') {
+            searchMemberDetails();
+        } else {
+            console.log("Invalid choice. Please try again.");
+        }
+    }
+
+    function captureMemberDetails() {
+        console.log("--- Member Capture ---");
+        // Implement member capture logic here
+        // Example: Prompt user for details and process input
+    }
+
+    function searchMemberDetails() {
+        console.log("--- Member Enquiry & Search ---");
+        // Implement member search logic here
+        // Example: Prompt user for search criteria and process input
+    }
+</script>
+</body>
+</html>
